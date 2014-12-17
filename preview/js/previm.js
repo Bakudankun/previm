@@ -63,6 +63,13 @@
     }
     if (needReload && (typeof getContent === 'function') && (typeof getFileType === 'function')) {
       _doc.getElementById('preview').innerHTML = transform(getFileType(), getContent());
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [['$','$'], ['\\(','\\)']],
+          processEscapes: true
+        }
+      });
+      MathJax.Hub.Queue(['Typeset',MathJax.Hub]);
       autoScroll('body');
     }
   }
