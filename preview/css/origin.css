@@ -21,6 +21,10 @@ body {
   max-width: 920px;
 }
 
+#preview pre, #preview code {
+  font-family: 'Ricty';
+}
+
 @media screen and (min-width: 914px) {
     body {
         width: 854px;
